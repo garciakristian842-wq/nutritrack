@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriTrack - Diet and Calorie Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">NutriTrack</div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#food">Food Tracker</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HOME -->
+        <section id="home" class="hero">
+            <div>
+                <h1>Track Your Food.<br>Track Your Progress.</h1>
+                <p>
+                    NutriTrack helps you monitor your daily food intake
+                    and calorie consumption.
+                </p>
+
+                <a href="#dashboard" class="btn">Get Started</a>
+            </div>
+        </section>
+
+        <!-- DASHBOARD -->
+        <section id="dashboard" class="section">
+            <h2>Daily Dashboard</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <h3>Daily Goal</h3>
+                    <p id="dailyGoal">2000 kcal</p>
+                </div>
+
+                <div class="card">
+                    <h3>Calories Consumed</h3>
+                    <p id="caloriesConsumed">0 kcal</p>
+                </div>
+
+                <div class="card">
+                    <h3>Remaining</h3>
+                    <p id="caloriesRemaining">2000 kcal</p>
+                </div>
+
+            </div>
+
+            <div class="progress-container">
+                <div id="progressBar"></div>
+            </div>
+
+            <p id="progressText">0% of daily goal</p>
+        </section>
+
+        <!-- FOOD TRACKER -->
+        <section id="food" class="section">
+            <h2>Food Tracker</h2>
+
+            <form id="foodForm">
+
+                <input
+                    type="text"
+                    id="foodName"
+                    placeholder="Food name"
+                    required
+                >
+
+                <input
+                    type="number"
+                    id="foodCalories"
+                    placeholder="Calories"
+                    min="1"
+                    required
+                >
+
+                <select id="mealType">
+                    <option value="Breakfast">Breakfast</option>
+                    <option value="Lunch">Lunch</option>
+                    <option value="Dinner">Dinner</option>
+                    <option value="Snack">Snack</option>
+                </select>
+
+                <button type="submit" class="btn">
+                    Add Food
+                </button>
+
+            </form>
+
+            <div class="food-list">
+                <h3>Today's Food</h3>
+
+                <ul id="foodList"></ul>
+            </div>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>© 2026 NutriTrack | Diet and Calorie Tracking System</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
